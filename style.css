@@ -915,6 +915,7 @@ footer span a:hover {
 
 #msg {
   color: #61b752;
+  /* color: #61b752; */
   margin-top: 15px;
   display: block;
 }
