@@ -326,7 +326,13 @@
                   required
                 ></textarea>
               </div>
-
+              <input
+                type="text"
+                name="DateAndTime"
+                id="DateAndTime"
+                required
+                hidden
+              />
               <div class="button">
                 <button type="submit">Send message</button>
               </div>
@@ -366,6 +372,23 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+    </script>
+    <script>
+      var today = new Date();
+
+      var date =
+        today.getDate() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getFullYear();
+
+      var time =
+        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+      var dateTime = date + " " + time;
+
+      document.getElementById("DateAndTime").value = dateTime;
     </script>
   </body>
 </html>
