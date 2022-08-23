@@ -906,10 +906,10 @@ footer span a:hover {
 
 @media (max-width: 500px) {
   .home .home-content .text-2 {
-    font-size: 39px;
+    font-size: 35px;
   }
   .home .home-content .text-3 {
-    font-size: 27px;
+    font-size: 23px;
   }
 }
 
