@@ -722,6 +722,10 @@ section .title::after {
   color: crimson;
   background: none;
 }
+
+.contact-info {
+  font-weight: 550;
+}
 /* CV BUTTON */
 /* ******************************* */
 
