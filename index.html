@@ -25,23 +25,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="js/jquery-3.5.1.min.js"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script> -->
     <script src="./js/typed.min.js"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script> -->
     <script src="./js/jquery.waypoints.min.js"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
     <script src="./js/owl.carousel.min.js"></script>
-
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    /> -->
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
   </head>
   <body>
@@ -377,45 +364,5 @@
     <!-- FOOTER SECTION END -->
 
     <script src="./script.js"></script>
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxuhxOjV8rSrV-hNst-OIZj8JeZc12nFpz6pnIGfTor8t9Lth9_VRydMhvmS8fM3UxL/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-      const sendBtn = document.getElementById("sendBtn");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        sendBtn.textContent = "sending...";
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML =
-              "<i class='fa fa-check' aria-hidden='true'></i> Message sent successfully.";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            sendBtn.textContent = "Send message";
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
-    <script>
-      var today = new Date();
-
-      var date =
-        today.getDate() +
-        "-" +
-        (today.getMonth() + 1) +
-        "-" +
-        today.getFullYear();
-
-      var time =
-        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-      var dateTime = date + " " + time;
-
-      document.getElementById("DateAndTime").value = dateTime;
-    </script>
   </body>
 </html>

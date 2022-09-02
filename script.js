@@ -83,3 +83,41 @@ $(document).ready(function () {
     },
   });
 });
+
+// Mailing JavaScript Functions
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbxuhxOjV8rSrV-hNst-OIZj8JeZc12nFpz6pnIGfTor8t9Lth9_VRydMhvmS8fM3UxL/exec";
+const form = document.forms["submit-to-google-sheet"];
+const msg = document.getElementById("msg");
+const sendBtn = document.getElementById("sendBtn");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendBtn.textContent = "sending...";
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      msg.innerHTML =
+        "<i class='fa fa-check' aria-hidden='true'></i> Message sent successfully.";
+      setTimeout(function () {
+        msg.innerHTML = "";
+      }, 5000);
+      sendBtn.textContent = "Send message";
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
+
+// JavaScript Functions for date insert
+
+var today = new Date();
+
+var date =
+  today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
+
+var time =
+  today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+var dateTime = date + " " + time;
+
+document.getElementById("DateAndTime").value = dateTime;
