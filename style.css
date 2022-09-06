@@ -182,6 +182,26 @@ html {
   background: none;
 }
 
+.home-social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+.home-social-icons a {
+  font-size: 20px;
+  display: block;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.home-social-icons a i {
+  font-size: 25px;
+}
+
+.home-social-icons a:hover {
+  color: crimson;
+  background: none;
+}
 /* HOME SECTION END  */
 
 /* NAV HOVER START */
