@@ -1,3 +1,12 @@
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function () {
+  $(".loader").delay(2000).fadeOut();
+  $(".preloader").delay(2000).fadeOut();
+  //   loader.style.display = "None";
+  //   window.themeColor = $("body").data("theme-color");
+});
+
 $(document).ready(function () {
   $(window).scroll(function () {
     // sticky navbar on scroll script

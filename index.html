@@ -31,6 +31,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="./js/typed.min.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
@@ -38,6 +44,20 @@
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
   </head>
   <body>
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+      <div class="loader_block">
+        <div class="loader_title">
+          <h2 class="preloader-logo">
+            You are most welcome ...<br />
+            <span>J</span>imi <span>C</span>hhatrala
+          </h2>
+        </div>
+        <div id="loader" class="loader"></div>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
     <div class="scroll-up-btn">
       <i class="fas fa-angle-up"></i>
     </div>
@@ -46,7 +66,7 @@
     <nav class="navbar">
       <div class="max-width">
         <div class="logo">
-          <a href="#"><span>J</span>imi.</a>
+          <a href="#"><span>J</span>imi</a>
         </div>
         <ul class="menu">
           <li><a style="--i: 0" href="#home" class="menu-btn">Home</a></li>
@@ -408,6 +428,7 @@
     </footer>
     <!-- FOOTER SECTION END -->
 
+    <script src="libraries-min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
