@@ -97,11 +97,70 @@ html {
 
 /* NAVBAR STYLING END */
 
+/* New Navbar Toggle Button Start*/
+
+.toggle {
+  padding-top: 17px;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  /* border: 1px solid#fff; */
+}
+
+.toggle span {
+  position: absolute;
+  width: 35px;
+  height: 3px;
+  background: #1863ff;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.toggle span:nth-child(1) {
+  transform: translateY(-15px);
+  width: 20px;
+  left: 0px;
+}
+
+.toggle.active span:nth-child(1) {
+  width: 40px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125s;
+}
+
+.toggle span:nth-child(2) {
+  transform: translateY(15px);
+  width: 14px;
+  left: 0px;
+}
+
+.toggle.active span:nth-child(2) {
+  width: 40px;
+  transform: translateY(0px) rotate(315deg);
+  transition-delay: 0.25s;
+}
+
+.toggle.active span:nth-child(3) {
+  transform: translateX(60px);
+}
+
+/* New Navbar Toggle Button End*/
+
 /* MENU BUTTON STYLING START */
-.menu-btn {
+/* .menu-btn {
   color: #fff;
   font-size: 23px;
   cursor: pointer;
+  display: none;
+} */
+
+.toggle {
+  /* cursor: pointer; */
   display: none;
 }
 /* MENU BUTTON STYLING END */
@@ -846,13 +905,19 @@ footer span a:hover {
   .max-width {
     padding: 0 50px;
   }
+
   .menu-btn {
     display: block;
     z-index: 999;
   }
-  .menu-btn i.active:before {
-    content: "\f00d";
+  .toggle {
+    display: block;
+    z-index: 999;
   }
+
+  /* .menu-btn i.active:before {
+    content: "\f00d";
+  } */
   .navbar .menu {
     position: fixed;
     height: 100vh;
@@ -875,6 +940,12 @@ footer span a:hover {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
+    left: -100%;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+  }
+  .navbar .menu.active li a {
+    left: 0;
   }
   .home .home-content .text-2 {
     font-size: 70px;
