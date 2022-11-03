@@ -37,17 +37,17 @@ $(document).ready(function () {
   });
 
   // toggle menu/navbar script
-  // $(".menu-btn").click(function () {
-  //   $(".navbar .menu").toggleClass("active");
-  //   $(".menu-btn").toggleClass("active");
-  // });
-
-  let menuToggle = document.querySelector(".toggle");
-
-  menuToggle.onclick = function () {
-    menuToggle.classList.toggle("active");
+  $(".menu-btn").click(function () {
     $(".navbar .menu").toggleClass("active");
-  };
+    $(".menu-btn").toggleClass("active");
+  });
+
+  // let menuToggle = document.querySelector(".toggle");
+
+  // menuToggle.onclick = function () {
+  //   menuToggle.classList.toggle("active");
+  //   $(".navbar .menu").toggleClass("active");
+  // };
 
   // typing text animation script
   var typed = new Typed(".typing", {
