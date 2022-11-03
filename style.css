@@ -104,7 +104,7 @@ body {
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Love+Light&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); */
 * {
   margin: 0;
@@ -157,12 +157,17 @@ html {
 
 .preloader-logo {
   color: #fff;
+  letter-spacing: 0.2rem;
+  /* font-family: serif; */
+  font-family: "Ubuntu", sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: "Times New Roman", Times, serif; */
   /* font-size: 35px; */
   font-weight: 500;
   /* font-family: "DynaPuff", cursive; */
   /* font-family: "Karla", sans-serif; */
   /* font-family: "Love Light", cursive; */
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
   /* font-family: "Montserrat", sans-serif; */
 }
 .preloader-logo span {
