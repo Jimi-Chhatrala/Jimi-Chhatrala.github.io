@@ -37,10 +37,14 @@ $(document).ready(function () {
   });
 
   // toggle menu/navbar script
-  $(".menu-btn").click(function () {
+  $(".toggle").click(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn").toggleClass("active");
   });
+  // $(".menu-btn").click(function () {
+  //   $(".navbar .menu").toggleClass("active");
+  //   $(".menu-btn").toggleClass("active");
+  // });
 
   // let menuToggle = document.querySelector(".toggle");
 
