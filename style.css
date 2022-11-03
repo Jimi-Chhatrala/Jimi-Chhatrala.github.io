@@ -890,7 +890,7 @@ section .title::after {
 }
 
 .contact .right form .textarea {
-  height: 80px;
+  height: 130px;
   width: 100%;
 }
 .contact .right form .name {
@@ -1003,6 +1003,7 @@ section .title::after {
 
 /* FOOTER SECTION START  */
 footer {
+  margin-top: 15px;
   background: #111;
   padding: 20px 23px;
   color: #fff;
@@ -1144,6 +1145,13 @@ footer span a:hover {
   .home .home-content .text-3 {
     font-size: 23px;
   }
+  .contact .right form .fields {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .right form .fields .email {
+    margin-left: 0;
+  }
 }
 
 /* RESPONSIVE MEDAI QUERY END */
@@ -1151,7 +1159,7 @@ footer span a:hover {
 /* ********************* CSS FOR SMALL SCREEN END ******************* */
 
 #msg {
-  color: #61b752;
+  color: rgb(25, 135, 84);
   /* color: #61b752; */
   margin-top: 15px;
   display: block;
