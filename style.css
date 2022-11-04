@@ -645,7 +645,7 @@ section .title::after {
 
 .skills .skills-content .right span {
   font-weight: 500;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .skills .skills-content .right .line {
@@ -684,6 +684,120 @@ section .title::after {
   width: 70%;
 }
 /* SKILLS SECTION END  */
+
+/* Skills Section with Icons Start */
+
+.skills__content {
+  background-color: rgba(252, 249, 249, 0.486);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 4rem;
+  border-radius: 1.25rem;
+}
+
+.skills__title {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills__box {
+  display: flex;
+  justify-content: center;
+  column-gap: 5rem;
+}
+
+.skills__group {
+  display: grid;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+.skills__data {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.skills .bx {
+  font-size: 1.5rem;
+}
+
+.skills .fa-brands {
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+.skills .fa-solid {
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
+.skills .php {
+  color: blueviolet;
+}
+.skills .laravel {
+  color: #fb503b;
+}
+.skills .mysql {
+  color: blue;
+}
+
+.skills .expressjs {
+  color: #3c873a;
+  /* color: color-mix(in srgb, #34c9eb 10%, white);; */
+  /* Charcoal (#303030), Russian Green (#68A063) and May Green (#3C873A).} */
+}
+
+.skills .nodejs {
+  color: green;
+}
+.skills .github {
+  color: #171515;
+}
+.skills .html {
+  color: blue;
+}
+.skills .css {
+  color: rgb(26, 26, 187);
+}
+.skills .javascript {
+  color: #f0db4f;
+}
+.skills .bootstrap {
+  color: #563d7c;
+}
+.skills .react {
+  color: #61dbfb;
+}
+.skills .git {
+  color: #f1502f;
+}
+.skills .mongodb {
+  color: #589636;
+}
+
+.skills .firebase {
+  color: #f5820d;
+}
+
+.skills .tailwindcss {
+  color: skyblue;
+}
+
+.skills .jquery {
+  color: #0769ad;
+}
+
+.skills__name {
+  /* font-family: "Poppins", sans-serif; */
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.skills__level {
+  font-size: 0.8rem;
+}
+/* Skills Section with Icons End */
 
 /* PORTFOLIO SECTION START */
 
@@ -1180,6 +1294,15 @@ footer span a:hover {
   }
   .contact .right form .fields .email {
     margin-left: 0;
+  }
+}
+
+@media (min-device-width: 480px) and (max-device-width: 640px) and (orientation: landscape) {
+  /* //enter code here */
+  .navbar .max-width ul {
+    overflow: scroll;
+    height: 400px;
+    color: green;
   }
 }
 
