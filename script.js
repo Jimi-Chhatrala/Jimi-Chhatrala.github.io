@@ -130,7 +130,7 @@ form.addEventListener("submit", (e) => {
       setTimeout(function () {
         msg.innerHTML = "";
       }, 5000);
-      sendBtn.textContent = "Send message";
+      sendBtn.textContent = "Send Message";
       form.reset();
     })
     .catch((error) => console.error("Error!", error.message));

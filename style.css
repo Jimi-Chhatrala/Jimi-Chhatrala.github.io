@@ -1024,9 +1024,9 @@ section .title::after {
   margin-right: 10px;
 }
 
-.contact .right form .email {
-  margin-left: 10px;
-}
+/* .contact .right form .email { */
+/* margin-left: 10px; */
+/* } */
 
 .contact .right form .field input,
 .contact .right form .textarea textarea {
@@ -1290,23 +1290,23 @@ footer span a:hover {
   }
   .contact .right form .fields {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
-  .contact .right form .fields .email {
-    margin-left: 0;
-  }
+  /* .contact .right form .fields .email { */
+  /* margin-left: 0; */
+  /* } */
 }
 
-@media (min-device-width: 480px) and (max-device-width: 640px) and (orientation: landscape) {
-  /* //enter code here */
-  .navbar .max-width ul {
+/* @media (min-device-width: 480px) and (max-device-width: 640px) and (orientation: landscape) { */
+/* //enter code here */
+/* .navbar .max-width ul {
     overflow: scroll;
     height: 400px;
     color: green;
   }
-}
+} */
 
-/* RESPONSIVE MEDAI QUERY END */
+/* RESPONSIVE MEDIA QUERY END */
 
 /* ********************* CSS FOR SMALL SCREEN END ******************* */
 
