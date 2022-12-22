@@ -64,11 +64,11 @@ $(document).ready(function () {
   // typing text animation script
   var typed = new Typed(".typing", {
     strings: [
-      "Frontend Designer",
-      "Backend Developer",
+      "IT Enthusiast",
       "Dedicated Programmer",
       "Team Player",
-      "React Developer",
+      "Tech Explorer",
+      "Software Engineer",
     ],
     typeSpeed: 100,
     backSpeed: 60,
@@ -77,11 +77,11 @@ $(document).ready(function () {
 
   var typed = new Typed(".typing-2", {
     strings: [
-      "Frontend Designer",
-      "Backend Developer",
+      "IT Enthusiast",
       "Dedicated Programmer",
       "Team Player",
-      "React Developer",
+      "Tech Explorer",
+      "Software Engineer",
     ],
     typeSpeed: 100,
     backSpeed: 60,
