@@ -229,7 +229,7 @@ const frontendData = [
   {
     id: 5,
     image: "react",
-    title: "Reat",
+    title: "ReactJS",
     percentage: "10",
   },
 ];
