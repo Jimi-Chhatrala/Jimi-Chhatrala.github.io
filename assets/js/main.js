@@ -36,7 +36,7 @@ function totalExperience() {
   var m = m2 - m1;
   var y = y2 - y1;
 
-  document.getElementById("totalWorkExperience").innerHTML = `${y}.${m}+`;
+  document.getElementById("totalWorkExperience").innerHTML = "1"; //`${y}.${m}+`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -432,19 +432,19 @@ window.onscroll = function () {
 const icon = document.querySelector(".icon");
 const search = document.querySelector(".search");
 
-icon.onclick = function () {
-  search.classList.toggle("active");
-  document.getElementById("mysearch").focus();
-};
+// icon.onclick = function () {
+//   search.classList.toggle("active");
+//   document.getElementById("mysearch").focus();
+// };
 
 document.addEventListener("click", function (event) {
   if (event.target.closest(".search")) {
     return;
   } else {
-    search.classList.remove("active");
-    matchList.innerHTML = "";
-    document.getElementById("mysearch").value = "";
-    document.querySelector(".search").classList.remove("overflow");
+    // search.classList.remove("active");
+    // matchList.innerHTML = "";
+    // document.getElementById("mysearch").value = "";
+    // document.querySelector(".search").classList.remove("overflow");
   }
 });
 
@@ -456,9 +456,9 @@ const matchList = document.getElementById("match-list");
 
 const clearBtn = document.querySelector(".clear");
 
-clearBtn.addEventListener("click", function () {
-  matchList.innerHTML = "";
-});
+// clearBtn.addEventListener("click", function () {
+//   matchList.innerHTML = "";
+// });
 
 const searchProjects = (searchText) => {
   let matches = rowsData.filter((project) => {
@@ -586,7 +586,7 @@ const outputHtml = (rowsData) => {
   }
 };
 
-mysearch.addEventListener("input", () => searchProjects(mysearch.value));
+// mysearch.addEventListener("input", () => searchProjects(mysearch.value));
 
 // Contact Form Data Submit Mailing JavaScript Functions
 
