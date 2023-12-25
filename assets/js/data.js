@@ -272,7 +272,7 @@ const designData = [
     id: 1,
     image: "figma",
     title: "Figma",
-    percentage: "0",
+    percentage: "1",
   },
 ];
 
