@@ -2526,3 +2526,7 @@ a {
   margin-top: 15px;
   display: inline-block;
 }
+
+.hide_cv_button {
+  visibility: hidden;
+}
