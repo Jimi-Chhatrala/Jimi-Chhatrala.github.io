@@ -674,3 +674,36 @@ async function hitURL() {
 
 // Set an interval to hit the URL every 5 minutes (300000 milliseconds)
 setInterval(hitURL, 30000);
+
+// ==================== PRELOADER START ====================
+
+document.addEventListener("DOMContentLoaded", function () {
+  let preloaderText = document.getElementById("preloader-text");
+  let progressBar = document.getElementById("progress-bar");
+
+  let loadedPercentage = 0;
+  const totalLength = progressBar.getTotalLength();
+  progressBar.style.strokeDasharray = totalLength;
+  progressBar.style.strokeDashoffset = totalLength;
+
+  let interval = setInterval(() => {
+    if (loadedPercentage >= 100) {
+      clearInterval(interval);
+      document.body.classList.remove("loading");
+      document.body.classList.add("loaded");
+      const preloader = document.getElementById("preloader");
+      preloader.classList.add("slide-up");
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500); // Match the duration of the slide-up animation
+    } else {
+      loadedPercentage += Math.random() * 10;
+      loadedPercentage = Math.min(loadedPercentage, 100);
+      preloaderText.textContent = Math.floor(loadedPercentage) + "%";
+      const offset = totalLength - totalLength * (loadedPercentage / 100);
+      progressBar.style.strokeDashoffset = offset;
+    }
+  }, 200);
+});
+
+// ==================== PRELOADER END ====================
