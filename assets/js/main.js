@@ -625,3 +625,52 @@ var time =
 var dateTime = date + " " + time;
 
 document.getElementById("DateAndTime").value = dateTime;
+
+// -----------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  const pageviewsCount = document.getElementById("pageviews-count");
+  const visitsCount = document.getElementById("visits-count");
+
+  async function fetchData() {
+    try {
+      if (sessionStorage.getItem("visit") === null) {
+        // New visit and pageview
+        updateCounter("type=visit-pageview");
+      } else {
+        // Pageview
+        updateCounter("type=pageview");
+      }
+
+      function updateCounter(type) {
+        // fetch("http://127.0.0.1:3002/api?" + type)
+        fetch("https://node-server-fawn.vercel.app/api?" + type)
+          .then((res) => res.json())
+          .then((data) => {
+            pageviewsCount.textContent = data.pageviews;
+            visitsCount.textContent = data.visits;
+          });
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+
+    sessionStorage.setItem("visit", "x");
+  }
+
+  fetchData();
+});
+
+// Function to make HTTP requests at regular intervals
+async function hitURL() {
+  try {
+    const response = await fetch("https://node-server-fawn.vercel.app/read");
+    const data = await response.json(); // Ensure the response is parsed as JSON
+    console.log("API Response:", data);
+  } catch (error) {
+    console.error("Error hitting URL:", error);
+  }
+}
+
+// Set an interval to hit the URL every 5 minutes (300000 milliseconds)
+setInterval(hitURL, 30000);
