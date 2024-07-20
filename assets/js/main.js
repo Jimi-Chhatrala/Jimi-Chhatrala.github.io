@@ -628,52 +628,126 @@ document.getElementById("DateAndTime").value = dateTime;
 
 // -----------------------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", function () {
-  const pageviewsCount = document.getElementById("pageviews-count");
-  const visitsCount = document.getElementById("visits-count");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const pageviewsCount = document.getElementById("pageviews-count");
+//   const visitsCount = document.getElementById("visits-count");
 
-  async function fetchData() {
-    try {
-      if (sessionStorage.getItem("visit") === null) {
-        // New visit and pageview
-        updateCounter("type=visit-pageview");
-      } else {
-        // Pageview
-        updateCounter("type=pageview");
-      }
+//   async function fetchData() {
+//     try {
+//       if (sessionStorage.getItem("visit") === null) {
+//         // New visit and pageview
+//         updateCounter("type=visit-pageview");
+//       } else {
+//         // Pageview
+//         updateCounter("type=pageview");
+//       }
 
-      function updateCounter(type) {
-        // fetch("http://127.0.0.1:3002/api?" + type)
-        fetch("https://node-server-fawn.vercel.app/api?" + type)
-          .then((res) => res.json())
-          .then((data) => {
-            pageviewsCount.textContent = data.pageviews;
-            visitsCount.textContent = data.visits;
-          });
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+//       function updateCounter(type) {
+//         // fetch("http://127.0.0.1:3002/api?" + type)
+//         fetch("https://node-server-fawn.vercel.app/api?" + type)
+//           .then((res) => res.json())
+//           .then((data) => {
+//             pageviewsCount.textContent = data.pageviews;
+//             visitsCount.textContent = data.visits;
+//           });
+//       }
+//     } catch (error) {
+//       console.error("Error fetching data:", error);
+//     }
 
-    sessionStorage.setItem("visit", "x");
-  }
+//     sessionStorage.setItem("visit", "x");
+//   }
 
-  fetchData();
-});
+//   fetchData();
+// });
 
-// Function to make HTTP requests at regular intervals
-async function hitURL() {
+// // Function to make HTTP requests at regular intervals
+// async function hitURL() {
+//   try {
+//     const response = await fetch("https://node-server-fawn.vercel.app/read");
+//     const data = await response.json(); // Ensure the response is parsed as JSON
+//     console.log("API Response:", data);
+//   } catch (error) {
+//     console.error("Error hitting URL:", error);
+//   }
+// }
+
+// // Set an interval to hit the URL every 5 minutes (300000 milliseconds)
+// setInterval(hitURL, 30000);
+
+// ==================== FIREBASE VISITOR COUNTER START ====================
+
+// Firebase Configuration and Logic
+
+// Your Firebase configuration
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBj0HtA-vyVz_g4LQ7Njuvm-fsr1zFFA2Y",
+  authDomain: "website-visitor-counter.firebaseapp.com",
+  projectId: "website-visitor-counter",
+  storageBucket: "website-visitor-counter.appspot.com",
+  messagingSenderId: "1040813132571",
+  appId: "1:1040813132571:web:4bb0e95a6635d95e9b21be",
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// Function to update visitor and pageview counts
+async function updateCounter(type) {
+  const counterRef = db.collection("counters").doc("visitor_count");
   try {
-    const response = await fetch("https://node-server-fawn.vercel.app/read");
-    const data = await response.json(); // Ensure the response is parsed as JSON
-    console.log("API Response:", data);
+    await db
+      .runTransaction(async (transaction) => {
+        const doc = await transaction.get(counterRef);
+        if (!doc.exists) {
+          transaction.set(counterRef, { visits: 0, pageviews: 0 });
+          return { visits: 0, pageviews: 0 };
+        }
+        const data = doc.data();
+        if (type === "type=visit-pageview") {
+          transaction.update(counterRef, {
+            visits: data.visits + 1,
+            pageviews: data.pageviews + 1,
+          });
+          return {
+            visits: data.visits + 1,
+            pageviews: data.pageviews + 1,
+          };
+        } else if (type === "type=pageview") {
+          transaction.update(counterRef, {
+            pageviews: data.pageviews + 1,
+          });
+          return { visits: data.visits, pageviews: data.pageviews + 1 };
+        }
+      })
+      .then((counts) => {
+        document.getElementById(
+          "visitor-count"
+        ).textContent = `${counts.pageviews}+ page views, ${counts.visits}+ visits, and counting...`;
+      });
   } catch (error) {
-    console.error("Error hitting URL:", error);
+    console.error("Error updating counter:", error);
   }
 }
 
-// Set an interval to hit the URL every 5 minutes (300000 milliseconds)
-setInterval(hitURL, 30000);
+// Check sessionStorage to determine if it's a new visit or just a pageview
+function checkAndUpdateCounter() {
+  if (sessionStorage.getItem("visit") === null) {
+    // New visit and pageview
+    updateCounter("type=visit-pageview");
+    sessionStorage.setItem("visit", "x");
+  } else {
+    // Pageview
+    updateCounter("type=pageview");
+  }
+}
+
+// Call the function to update the count when the page loads
+checkAndUpdateCounter();
+
+// ==================== FIREBASE VISITOR COUNTER END ====================
 
 // ==================== PRELOADER START ====================
 
