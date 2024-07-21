@@ -2612,7 +2612,9 @@ body.loaded {
   position: absolute;
   font-size: 24px;
   text-align: center;
-  color: #ffffff; /* Light text color for preloader text */
+  color: var(--first-color);
+  /* color: #ffffff; */
+  /* Light text color for preloader text */
 }
 
 #progress-bar {
