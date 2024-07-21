@@ -299,14 +299,47 @@ $(document).ready(function () {
       $curr = $list.filter("." + this.id).hide();
       $curr.slice(0, 2).show(400);
       $list.not($curr).hide(300);
+      checkLoadMoreButton(); // Check if "Load More" button needs to be shown or hidden
     })
     .filter(".active-work")
     .click();
 
   $("#LoadMore").on("click", function () {
-    $curr.filter(":hidden").slice(0, 2).slideDown("slow");
+    var hiddenItems = $curr.filter(":hidden");
+    hiddenItems.slice(0, 2).slideDown("slow");
+    if (hiddenItems.length <= 2) {
+      $(this).hide(); // Hide the "Load More" button if there are no more items to show
+    }
   });
+
+  function checkLoadMoreButton() {
+    if ($curr.filter(":hidden").length === 0) {
+      $("#LoadMore").hide(); // Hide the button if no hidden items are left
+    } else {
+      $("#LoadMore").show(); // Show the button if there are hidden items
+    }
+  }
 });
+
+// $(document).ready(function () {
+//   var $list = $(".card-product-box .card").hide(),
+//     $curr;
+
+//   $(".work-item")
+//     .on("click", function () {
+//       var $this = $(this);
+//       $this.addClass("active-work").siblings().removeClass("active-work");
+//       $curr = $list.filter("." + this.id).hide();
+//       $curr.slice(0, 2).show(400);
+//       $list.not($curr).hide(300);
+//     })
+//     .filter(".active-work")
+//     .click();
+
+//   $("#LoadMore").on("click", function () {
+//     $curr.filter(":hidden").slice(0, 2).slideDown("slow");
+//   });
+// });
 
 // $(document).ready(function () {
 //   var $list = $(".work-container .work-card").hide(),
