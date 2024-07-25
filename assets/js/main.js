@@ -788,29 +788,38 @@ document.addEventListener("DOMContentLoaded", function () {
   let preloaderText = document.getElementById("preloader-text");
   let progressBar = document.getElementById("progress-bar");
 
-  let loadedPercentage = 0;
   const totalLength = progressBar.getTotalLength();
   progressBar.style.strokeDasharray = totalLength;
   progressBar.style.strokeDashoffset = totalLength;
 
+  // Start loading progress
+  let loadedPercentage = 0;
   let interval = setInterval(() => {
-    if (loadedPercentage >= 100) {
-      clearInterval(interval);
-      document.body.classList.remove("loading");
-      document.body.classList.add("loaded");
-      const preloader = document.getElementById("preloader");
-      preloader.classList.add("slide-up");
-      setTimeout(() => {
-        preloader.style.display = "none";
-      }, 500); // Match the duration of the slide-up animation
-    } else {
-      loadedPercentage += Math.random() * 10;
+    if (loadedPercentage < 100) {
+      loadedPercentage += Math.random() * 5; // Increment by a random value
       loadedPercentage = Math.min(loadedPercentage, 100);
       preloaderText.textContent = Math.floor(loadedPercentage) + "%";
       const offset = totalLength - totalLength * (loadedPercentage / 100);
       progressBar.style.strokeDashoffset = offset;
+    } else {
+      clearInterval(interval);
     }
   }, 200);
+
+  // Wait for the entire page to load
+  window.onload = function () {
+    clearInterval(interval); // Clear any interval if still running
+    preloaderText.textContent = "100%";
+    progressBar.style.strokeDashoffset = 0;
+
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("fade-out");
+    document.body.classList.remove("loading");
+    document.body.classList.add("loaded");
+    setTimeout(() => {
+      preloader.style.display = "none"; // Hide preloader after fade-out
+    }, 500); // Match the duration of the fade-out transition
+  };
 });
 
 // ==================== PRELOADER END ====================
