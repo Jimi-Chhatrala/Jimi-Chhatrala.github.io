@@ -298,6 +298,10 @@ const skillsData = [
     image: "vite",
     title: "Vite",
   },
+  // {
+  //   image: "reactnative",
+  //   title: "React Native",
+  // },
   {
     image: "md365fo",
     title: "MS Dynamics 365 F&O",
