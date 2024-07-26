@@ -77,7 +77,7 @@ const rowsData = [
     category: "Game",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum amet veritatis, blanditiis itaque reiciendis similique temporibus aliquid fugiat nisi dolorem quibusdam eos est tempore architecto praesentium! Numquam, unde itaque!",
-    techstack: ["REACT", "FIREBASE"],
+    techstack: ["REACTJS", "FIREBASE"],
     demolink:
       "https://jimi-chhatrala.github.io/javascript-projects/Guess the number",
   },
@@ -88,7 +88,7 @@ const rowsData = [
     category: "UI-Design",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat accusamus soluta sapiente, sunt vel aperiam ullam illo iste qui, suscipit, sed provident quisquam itaque adipisci debitis optio quas vero voluptate!",
-    techstack: ["REACT", "ANGULAR", "BOOTSTRAP", "FIREBASE"],
+    techstack: ["REACTJS", "ANGULAR", "BOOTSTRAP", "FIREBASE"],
     demolink: "https://jimi-chhatrala.github.io/javascript-projects/UI Modal",
   },
   {
@@ -201,87 +201,110 @@ const rowsData = [
   // },
 ];
 
-const frontendData = [
+const skillsData = [
   {
-    id: 1,
     image: "html5",
     title: "HTML",
-    percentage: "35",
   },
   {
-    id: 2,
     image: "css3",
     title: "CSS",
-    percentage: "20",
   },
   {
-    id: 3,
+    image: "sass",
+    title: "Sass",
+  },
+  {
+    image: "bootstrap",
+    title: "Bootstrap",
+  },
+  {
+    image: "tailwindcss",
+    title: "Tailwind CSS",
+  },
+  {
     image: "javascript",
     title: "JavaScript",
-    percentage: "15",
   },
+  // {
+  //   image: "typescript",
+  //   title: "TypeScript",
+  // },
   {
-    id: 3,
     image: "jquery",
     title: "jQuery",
-    percentage: "15",
   },
   {
-    id: 5,
     image: "reactjs",
-    title: "ReactJS",
-    percentage: "10",
+    title: "React JS",
   },
-];
-
-const backendData = [
   {
-    id: 1,
+    image: "redux",
+    title: "Redux",
+  },
+  {
+    image: "reduxsaga",
+    title: "Redux Saga",
+  },
+  {
+    image: "nextjs",
+    title: "Next JS",
+  },
+  {
+    image: "vuejs",
+    title: "Vue JS",
+  },
+  {
     image: "expressjs",
     title: "Express Js",
-    percentage: "10",
   },
+  // {
+  //   image: "graphql",
+  //   title: "GraphQL",
+  // },
   {
-    id: 2,
     image: "nodejs",
     title: "Node Js",
-    percentage: "15",
   },
   {
-    id: 3,
     image: "firebase",
     title: "Firebase",
-    percentage: "15",
   },
+  // {
+  //   image: "php",
+  //   title: "PHP",
+  // },
   {
-    id: 4,
-    image: "php",
-    title: "PHP",
-    percentage: "10",
-  },
-  {
-    id: 5,
     image: "mysql",
     title: "MySQL",
-    percentage: "10",
   },
-];
-
-const designData = [
   {
-    id: 1,
-    image: "figma",
-    title: "Figma",
-    percentage: "1",
+    image: "mongodb",
+    title: "MongoDB",
   },
-];
-
-const toolsData = [
   {
-    id: 1,
     image: "git",
-    title: "git",
-    percentage: "5",
+    title: "Git",
+  },
+  {
+    image: "github",
+    title: "GitHub",
+  },
+  {
+    image: "npm",
+    title: "NPM",
+  },
+  {
+    image: "vite",
+    title: "Vite",
+  },
+  {
+    image: "md365fo",
+    title: "MS Dynamics 365 F&O",
+  },
+  {
+    image: "xpp",
+    title: "X++",
   },
 ];
 
