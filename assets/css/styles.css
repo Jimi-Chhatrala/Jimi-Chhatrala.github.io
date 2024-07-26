@@ -2700,8 +2700,8 @@ body.loaded {
   box-sizing: inherit;
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 115px;
+  height: 115px;
 }
 
 .spin {
