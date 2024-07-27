@@ -1613,6 +1613,13 @@ image {
   }
 }
 
+@media screen and (max-width: 570px) {
+  .footer__socials {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media screen and (min-width: 570px) {
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
@@ -1643,7 +1650,7 @@ image {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -2766,4 +2773,10 @@ body.loaded {
   opacity: 1;
   visibility: visible;
   bottom: -40px; /* Move the tag slightly below */
+}
+
+/* *************************************** */
+
+.socialsData {
+  color: var(--first-color);
 }

@@ -230,10 +230,10 @@ const skillsData = [
   //   image: "typescript",
   //   title: "TypeScript",
   // },
-  {
-    image: "jquery",
-    title: "jQuery",
-  },
+  // {
+  //   image: "jquery",
+  //   title: "jQuery",
+  // },
   {
     image: "reactjs",
     title: "React JS",
@@ -310,9 +310,56 @@ const skillsData = [
     image: "xpp",
     title: "X++",
   },
+  // {
+  //   image: "webpack",
+  //   title: "Webpack",
+  // },
+  {
+    image: "sql",
+    title: "SQL",
+  },
+  {
+    image: "api",
+    title: "API",
+  },
+  {
+    image: "postman",
+    title: "Postman",
+  },
+  // {
+  //   image: "apollo",
+  //   title: "Apollo",
+  // },
+  {
+    image: "python",
+    title: "Python",
+  },
+  {
+    image: "cpp",
+    title: "C++",
+  },
 ];
 
 const pythonStarCount = 1,
   cplusplusLanguageStarCount = 2,
   sqlStarCount = 3,
   problemSolvingStarCount = 4;
+
+socialsData = [
+  {
+    image: "linkedin",
+    url: "https://www.linkedin.com/in/jimichhatrala",
+  },
+  {
+    image: "youtube",
+    url: "https://www.youtube.com/channel/UCROId6dBeFxJCQAycqDNZ_g",
+  },
+  {
+    image: "github",
+    url: "https://github.com/jimi-chhatrala/",
+  },
+  {
+    image: "stackoverflow",
+    url: "https://stackoverflow.com/users/26219038/jimi-chhatrala",
+  },
+];
