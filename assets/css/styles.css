@@ -1808,7 +1808,8 @@ image {
   }
 
   .footer__container {
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer__bg {
@@ -1820,9 +1821,9 @@ image {
     column-gap: 2rem;
   }
 
-  .footer__socials {
+  /* .footer__socials {
     justify-self: flex-end;
-  }
+  } */
 
   .footer__copy {
     margin-top: 4.5rem;

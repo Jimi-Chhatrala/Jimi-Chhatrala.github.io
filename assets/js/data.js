@@ -226,10 +226,10 @@ const skillsData = [
     image: "javascript",
     title: "JavaScript",
   },
-  // {
-  //   image: "typescript",
-  //   title: "TypeScript",
-  // },
+  {
+    image: "typescript",
+    title: "TypeScript",
+  },
   // {
   //   image: "jquery",
   //   title: "jQuery",
@@ -258,10 +258,10 @@ const skillsData = [
     image: "expressjs",
     title: "Express Js",
   },
-  // {
-  //   image: "graphql",
-  //   title: "GraphQL",
-  // },
+  {
+    image: "graphql",
+    title: "GraphQL",
+  },
   {
     image: "nodejs",
     title: "Node Js",
@@ -310,10 +310,10 @@ const skillsData = [
     image: "xpp",
     title: "X++",
   },
-  // {
-  //   image: "webpack",
-  //   title: "Webpack",
-  // },
+  {
+    image: "webpack",
+    title: "Webpack",
+  },
   {
     image: "sql",
     title: "SQL",
@@ -326,10 +326,10 @@ const skillsData = [
     image: "postman",
     title: "Postman",
   },
-  // {
-  //   image: "apollo",
-  //   title: "Apollo",
-  // },
+  {
+    image: "apollo",
+    title: "Apollo",
+  },
   {
     image: "python",
     title: "Python",
@@ -337,6 +337,30 @@ const skillsData = [
   {
     image: "cpp",
     title: "C++",
+  },
+  {
+    image: "gulp",
+    title: "Gulp",
+  },
+  {
+    image: "chakraui",
+    title: "Chakra UI",
+  },
+  {
+    image: "vercel",
+    title: "Vercel",
+  },
+  {
+    image: "netlify",
+    title: "Netlify",
+  },
+  {
+    image: "prettier",
+    title: "Prettier",
+  },
+  {
+    image: "restapi",
+    title: "REST API",
   },
 ];
 
