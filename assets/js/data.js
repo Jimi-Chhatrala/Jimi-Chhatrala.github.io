@@ -55,7 +55,7 @@ const rowsData = [
     category: "UI-Design",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore vero veritatis quisquam temporibus quidem ut deleniti illum neque libero provident, id dolore blanditiis exercitationem doloremque, ipsam dicta rem excepturi tenetur nam laborum sunt ea repellendus natus sit! Vitae, nobis non.",
-    techstack: ["TAILWINDCSS", "FIREBASE", "JAVA", "BOOTSTRAP"],
+    techstack: ["TAILWINDCSS", "FIREBASE", "JAVASCRIPT", "BOOTSTRAP"],
     demolink:
       "https://jimi-chhatrala.github.io/javascript-projects/Progress Steps/",
   },
@@ -88,7 +88,7 @@ const rowsData = [
     category: "UI-Design",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat accusamus soluta sapiente, sunt vel aperiam ullam illo iste qui, suscipit, sed provident quisquam itaque adipisci debitis optio quas vero voluptate!",
-    techstack: ["REACTJS", "ANGULAR", "BOOTSTRAP", "FIREBASE"],
+    techstack: ["HTML5", "CSS3", "JAVASCRIPT"],
     demolink: "https://jimi-chhatrala.github.io/javascript-projects/UI Modal",
   },
   {
@@ -159,7 +159,7 @@ const rowsData = [
     id: 13,
     image: "color-markers",
     title: "Color Markers",
-    category: "UI Design",
+    category: "UI-Design",
     description:
       "A simple design which shows a set of colored markers. It shows different ways to set color values and how to pair colors with each other. [Small Project of freecodecamp.org]",
     techstack: ["HTML5", "CSS3"],

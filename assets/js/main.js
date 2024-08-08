@@ -142,10 +142,12 @@ tabs.forEach((tab) => {
 
 const modalViews = document.querySelectorAll(".services__modal"),
   modalBtns = document.querySelectorAll(".services__button"),
-  modalCloses = document.querySelectorAll(".services__modal-close");
+  modalCloses = document.querySelectorAll(".services__modal-close"),
+  body = document.body;
 
 let modal = function (modalClick) {
   modalViews[modalClick].classList.add("active-modal");
+  body.classList.add("modal-open");
 };
 
 modalBtns.forEach((modalBtn, i) => {
@@ -158,6 +160,7 @@ modalCloses.forEach((modalClose) => {
   modalClose.addEventListener("click", () => {
     modalViews.forEach((modalView) => {
       modalView.classList.remove("active-modal");
+      body.classList.remove("modal-open");
     });
   });
 });
@@ -409,40 +412,40 @@ $(document).ready(function () {
  * *********** SKILLS SECTION PROGRESS BAR WIDTH INCREASE ANIMATION
  */
 
-let section = document.querySelector(".uil-download-alt");
+// let section = document.querySelector(".uil-download-alt");
 
-let spans = document.querySelectorAll(".progress span");
+// let spans = document.querySelectorAll(".progress span");
 
-let nums = document.querySelectorAll(".nums .num");
+// let nums = document.querySelectorAll(".nums .num");
 
-let started = false; // Function Started ? No
+// let started = false; // Function Started ? No
 
-function startCount(el) {
-  let goal = el.dataset.goal;
-  let count = setInterval(() => {
-    el.textContent++;
-    if (el.textContent == goal) {
-      clearInterval(count);
-    }
-  }, 2000 / goal);
-}
+// function startCount(el) {
+//   let goal = el.dataset.goal;
+//   let count = setInterval(() => {
+//     el.textContent++;
+//     if (el.textContent == goal) {
+//       clearInterval(count);
+//     }
+//   }, 2000 / goal);
+// }
 
-window.onscroll = function () {
-  // ********************************* PROGRESS BAR ***************************
+// window.onscroll = function () {
+//   // ********************************* PROGRESS BAR ***************************
 
-  if (window.scrollY >= section.offsetTop) {
-    spans.forEach((span) => {
-      span.style.width = span.dataset.width;
-    });
+//   if (window.scrollY >= section.offsetTop) {
+//     spans.forEach((span) => {
+//       span.style.width = span.dataset.width;
+//     });
 
-    // ********************************* PROGRESS PERCENTAGE ***************************
+//     // ********************************* PROGRESS PERCENTAGE ***************************
 
-    if (!started) {
-      nums.forEach((num) => startCount(num));
-    }
-    started = true;
-  }
-};
+//     if (!started) {
+//       nums.forEach((num) => startCount(num));
+//     }
+//     started = true;
+//   }
+// };
 
 /**
  * ******************** SKILLS SECTION PROGRESS PERCENTAGE NUMBER INCREASE
