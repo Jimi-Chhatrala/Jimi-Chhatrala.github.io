@@ -142,7 +142,7 @@ const rowsData = [
       "A simple website which shows information about the cats, their likes and dislikes, and several images and links to images. [Small Project of freecodecamp.org]",
     techstack: ["HTML5"],
     demolink:
-      "https://jimi-chhatrala.github.io/Free-Code-Camp-Works/(New) Responsive Web Design/Learn HTML by Building a Cat Photo App",
+      "https://jimi-chhatrala.github.io/Free-Code-Camp-Works/Responsive Web Design/Learn HTML by Building a Cat Photo App",
   },
   {
     id: 12,
@@ -152,20 +152,20 @@ const rowsData = [
     description:
       "A simple design which shows a menu page for a cafe webpage. It shows coffee flavors and deserts information. [Small Project of freecodecamp.org]",
     techstack: ["HTML5", "CSS3"],
-    demolink: `${DEMO_LINK}Free-Code-Camp-Works/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-    sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
+    demolink: `${DEMO_LINK}Free-Code-Camp-Works/Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
+    sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
   },
-  // {
-  //   id: 12,
-  //   image: "cafe-menu",
-  //   title: "Cafe Menu",
-  //   category: "Website",
-  //   description:
-  //     "A simple design which shows a menu page for a cafe webpage. It shows coffee flavors and deserts information. [Small Project of freecodecamp.org]",
-  //   techstack: ["HTML5", "CSS3"],
-  //   demolink: `${DEMO_LINK}Free-Code-Camp-Works/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-  //   sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-  // },
+  {
+    id: 13,
+    image: "color-markers",
+    title: "Color Markers",
+    category: "UI Design",
+    description:
+      "A simple design which shows a set of colored markers. It shows different ways to set color values and how to pair colors with each other. [Small Project of freecodecamp.org]",
+    techstack: ["HTML5", "CSS3"],
+    demolink: `${DEMO_LINK}Free-Code-Camp-Works/Responsive Web Design/Learn CSS Colors by Building a Set of Colored Markers`,
+    sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/Responsive Web Design/Learn CSS Colors by Building a Set of Colored Markers`,
+  },
   // {
   //   id: 12,
   //   image: "cafe-menu",
