@@ -260,14 +260,7 @@ const rowsData = [
     category: "Web-App",
     description:
       "A simple and intuitive application for tracking your income and expenses. This app provides a clear overview of your financial status, including detailed charts and transaction lists.",
-    techstack: [
-      "HTML5",
-      "TAILWINDCSS",
-      "REACTJS",
-      "REDUX",
-      "API",
-      "REACTAPEXCHART",
-    ],
+    techstack: ["CHAKRAUI", "REACTJS", "REACTAPEXCHART"],
     demolink: `${DEMO_LINK}react-js-expense-tracker-app/`,
     sourcecodelink: `${SOURCE_CODE_LINK}react-js-expense-tracker-app/`,
   },
