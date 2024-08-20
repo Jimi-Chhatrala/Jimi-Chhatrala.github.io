@@ -167,7 +167,7 @@ const rowsData = [
     sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/Responsive Web Design/Learn CSS Colors by Building a Set of Colored Markers`,
   },
   {
-    id: 12,
+    id: 14,
     image: "mern-auth-app",
     title: "MERN Auth App",
     category: "Web-App",
@@ -184,31 +184,93 @@ const rowsData = [
       "FIREBASE",
       "RENDER",
     ],
-    demolink: `https://mern-auth-vpuy.onrender.com/about`,
-    sourcecodelink: `https://github.com/Jimi-Chhatrala/mern-auth`,
+    demolink: `https://mern-auth-vpuy.onrender.com/`,
+    sourcecodelink: `${SOURCE_CODE_LINK}mern-auth`,
   },
-  // {
-  //   id: 12,
-  //   image: "cafe-menu",
-  //   title: "Cafe Menu Lorem, ipsum dolor.",
-  //   category: "Website",
-  //   description:
-  //     "A simple design which shows a menu page for a cafe webpage. It shows coffee flavors and deserts information. [Small Project of freecodecamp.org]",
-  //   techstack: ["HTML5", "CSS3"],
-  //   demolink: `${DEMO_LINK}Free-Code-Camp-Works/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-  //   sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-  // },
-  // {
-  //   id: 12,
-  //   image: "cafe-menu",
-  //   title: "Cafe Menu Lorem ipsum dolor sit amet.",
-  //   category: "Website",
-  //   description:
-  //     "A simple design which shows a menu page for a cafe webpage. It shows coffee flavors and deserts information. [Small Project of freecodecamp.org]",
-  //   techstack: ["HTML5", "CSS3"],
-  //   demolink: `${DEMO_LINK}Free-Code-Camp-Works/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-  //   sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-  // },
+  {
+    id: 15,
+    image: "movie-search-app",
+    title: "Movie Search App",
+    category: "Website",
+    description:
+      "The application allows users to search for movies and view detailed information.",
+    techstack: ["HTML5", "MATERIALUI", "REACTJS", "REDUX", "REDUXSAGA", "API"],
+    demolink: `${DEMO_LINK}movie-app/`,
+    sourcecodelink: `${SOURCE_CODE_LINK}movie-app/`,
+  },
+  {
+    id: 16,
+    image: "blog-app",
+    title: "Blog App",
+    category: "Web-App",
+    description:
+      "A blog platform focused on technology topics, allowing tech enthusiasts and experts to share information, insights, news, reviews, and updates about the technology industry.",
+    techstack: ["HTML5", "CSS3", "REACTJS", "FIREBASE"],
+    demolink: `https://teach-on-tech.web.app/`,
+    sourcecodelink: `${SOURCE_CODE_LINK}`,
+  },
+  {
+    id: 17,
+    image: "reactjs-projects",
+    title: "ReactJS Projects",
+    category: "UI-Design",
+    description:
+      "Made different components with ReactJS used in various pieces of our web applications such as Accordion, Random Color Generator, Star Rating, Image Slider, Load More Data Button, Tree View, QR Code Generator, Light Dark Mode, Scroll Indicator, Custom Modal Popup, GitHub Profile Finder, Search Autocomplete With API, Tic Tac Toe Game, Feature Flag, Use Fetch Custom Hook, Use Outside Click Custom Hook, Use Window Resize Custom Hook, Scroll To Top And Bottom and Scroll To Particular Section.",
+    techstack: ["HTML5", "CSS3", "REACTJS", "API"],
+    demolink: `${DEMO_LINK}reactjs-25-projects`,
+    sourcecodelink: `${SOURCE_CODE_LINK}reactjs-25-projects`,
+  },
+  {
+    id: 18,
+    image: "recipe-app",
+    title: "Recipe App",
+    category: "Website",
+    description:
+      "This application allows you to search for recipes based on specific search term like apple or banana. You can view detailed recipes, including images and ingredient lists, and manage your favorite recipes.",
+    techstack: ["HTML5", "TAILWINDCSS", "REACTJS", "API"],
+    demolink: `${DEMO_LINK}react-js-recipe-app/`,
+    sourcecodelink: `${SOURCE_CODE_LINK}react-js-recipe-app/`,
+  },
+  {
+    id: 19,
+    image: "weather-app",
+    title: "Weather App",
+    category: "Website",
+    description:
+      "This application is built using ReactJS and allows users to get current weather information by simply entering a location. Upon searching, the app retrieves and displays detailed weather data including location, country, temperature, climate, wind speed, and humidity.",
+    techstack: ["HTML5", "CSS3", "REACTJS", "API"],
+    demolink: `${DEMO_LINK}react-js-weather-app/`,
+    sourcecodelink: `${SOURCE_CODE_LINK}react-js-weather-app/`,
+  },
+  {
+    id: 20,
+    image: "shopping-cart-app",
+    title: "Shopping Cart App",
+    category: "Web-App",
+    description:
+      "A modern shopping cart application built with ReactJS, using a third-party API to fetch product data. This app allows users to browse through a variety of products, add them to a shopping cart, and manage their selections seamlessly.",
+    techstack: ["HTML5", "TAILWINDCSS", "REACTJS", "REDUX", "API"],
+    demolink: `${DEMO_LINK}react-js-shopping-cart-app/`,
+    sourcecodelink: `${SOURCE_CODE_LINK}react-js-shopping-cart-app/`,
+  },
+  {
+    id: 21,
+    image: "expense-tracker-app",
+    title: "Expense Tracker App",
+    category: "Web-App",
+    description:
+      "A simple and intuitive application for tracking your income and expenses. This app provides a clear overview of your financial status, including detailed charts and transaction lists.",
+    techstack: [
+      "HTML5",
+      "TAILWINDCSS",
+      "REACTJS",
+      "REDUX",
+      "API",
+      "REACTAPEXCHART",
+    ],
+    demolink: `${DEMO_LINK}react-js-expense-tracker-app/`,
+    sourcecodelink: `${SOURCE_CODE_LINK}react-js-expense-tracker-app/`,
+  },
 ];
 
 const skillsData = [
@@ -375,6 +437,10 @@ const skillsData = [
   {
     image: "render",
     title: "Render",
+  },
+  {
+    image: "reactapexchart",
+    title: "React ApexChart",
   },
 ];
 
