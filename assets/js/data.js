@@ -166,17 +166,27 @@ const rowsData = [
     demolink: `${DEMO_LINK}Free-Code-Camp-Works/Responsive Web Design/Learn CSS Colors by Building a Set of Colored Markers`,
     sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/Responsive Web Design/Learn CSS Colors by Building a Set of Colored Markers`,
   },
-  // {
-  //   id: 12,
-  //   image: "cafe-menu",
-  //   title: "Cafe Menu",
-  //   category: "Website",
-  //   description:
-  //     "A simple design which shows a menu page for a cafe webpage. It shows coffee flavors and deserts information. [Small Project of freecodecamp.org]",
-  //   techstack: ["HTML5", "CSS3"],
-  //   demolink: `${DEMO_LINK}Free-Code-Camp-Works/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-  //   sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/${GITHUB_REPOSITORY_URL_JOINER}/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
-  // },
+  {
+    id: 12,
+    image: "mern-auth-app",
+    title: "MERN Auth App",
+    category: "Web-App",
+    description:
+      "This is a MERN (MongoDB, Express, React, Node.js) stack application with authentication. It allows users to sign up, log in, and log out, and provides access to protected routes only for authenticated users. This application is designed to demonstrate key aspects of modern web development and secure user management.",
+    techstack: [
+      "HTML5",
+      "TAILWINDCSS",
+      "REACTJS",
+      "REDUX",
+      "NODEJS",
+      "EXPRESSJS",
+      "MONGODB",
+      "FIREBASE",
+      "RENDER",
+    ],
+    demolink: `https://mern-auth-vpuy.onrender.com/about`,
+    sourcecodelink: `https://github.com/Jimi-Chhatrala/mern-auth`,
+  },
   // {
   //   id: 12,
   //   image: "cafe-menu",
@@ -361,6 +371,10 @@ const skillsData = [
   {
     image: "restapi",
     title: "REST API",
+  },
+  {
+    image: "render",
+    title: "Render",
   },
 ];
 
